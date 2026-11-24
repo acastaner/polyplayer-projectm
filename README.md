@@ -35,7 +35,7 @@ With Docker, from this folder:
 docker run --rm -u "$(id -u):$(id -g)" -e HOME=/tmp \
   -v "$PWD:/src:ro" -v "$PWD/out:/out" \
   emscripten/emsdk:7.0.1@sha256:73aece2e0ab748487945ad117b79fc4d277e9f656e54fc800a9b1a0a6562715b \
-  /src/build.sh /out
+  bash /src/build.sh /out
 ```
 
 `out/` then holds `projectm.mjs` and `projectm.wasm` (about 1 MB together, 0.34 MB gzipped). Any
